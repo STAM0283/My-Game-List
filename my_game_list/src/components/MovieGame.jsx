@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Home = () => {
+const MovieGame = () => {
     return (
         <div>
-            BEBE
+            Papa
         </div>
     );
 };
 
-export default Home;
+export default MovieGame;
