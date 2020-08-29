@@ -1,18 +1,22 @@
-import React from "react";
-import minecraft from "../images/minecraft.png";
-import image_game from "../images/image_game.png";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const Home = () => {
-  return (
-    <div className = "home">
-      <p>welcome to the wonderful world of video games</p>
-      <img
-        style={{ marginRight: "4%" }}
-        src={image_game}
-        alt="image game boy color"
-      />
-      <img src={minecraft} alt=" image minecraft" />
+  const [imageOfDay, setImageOfDay] = useState(null);
+  const [idImageOfDay, setIdImageOfDay] = useState(0);
+
+  useEffect(() => {
+    axios.get("https://wild-games.herokuapp.com/api/v1").then((response) => {
+      setImageOfDay(response.data.map((item) => item));
+      setIdImageOfDay(Math.floor(Math.random() * 10));
+    });
+  }, []);
+  return imageOfDay !== null ? (
+    <div className="home">
+      <img src={imageOfDay[idImageOfDay].background_image} alt="picture of day" style = {{width: "60%"}}/>
     </div>
+  ) : (
+    <p>Pas De Data</p>
   );
 };
 

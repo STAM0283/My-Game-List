@@ -1,65 +1,90 @@
-*{
+* {
   margin: auto;
 }
-button{
+.app button {
   cursor: pointer;
+  background: transparent;
+  border: solid 5px wheat;
+  box-shadow: 0px 0px 20px #00ccff, inset 0px 0px 20px #00ccff,
+    0px 0px 60px #ff00c8, inset 0px 0px 60px #00ffff;
+    width: 10%;
+    height: 40px;
+    font-size: large;
+    font-weight: bolder;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 .App {
   text-align: center;
-  background-color: darkgoldenrod;
+  background-color: black;
 }
-video{
+video {
   margin-bottom: 30px;
   margin-top: 30px;
+  border: solid 5px wheat;
+  box-shadow: 0px 0px 20px #00ccff, inset 0px 0px 20px #00ccff,
+    0px 0px 60px #ff00c8, inset 0px 0px 60px #00ffff;
+  width: 60%;
 }
-.movie{
-  background-color: chocolate;
+.movie {
+  background-color: black;
 }
-.App button{
-  width: 10%;
-  height: 40px;
-  font-size: large;
-  font-weight: bolder;
-  margin-left: 10px;
-  margin-bottom: 10px;
-  margin-top: 10px;
+.contour-listGame {
+  box-shadow: 0px 0px 20px #00ccff, inset 0px 0px 20px #00ccff,
+    0px 0px 60px #ff00c8, inset 0px 0px 60px #ff00c8;
 }
-.navBar ul{
+.navBar ul {
   display: flex;
 }
-.navBar img{
+.navBar img {
   width: 8%;
   margin-right: 5px;
 }
-li{
+li {
   list-style: none;
 }
-.home p{
+/* .modal img{
+  border: solid 3px rgb(238, 219, 243);
+  box-shadow: 0px 0px 20px #00ccff, inset 0px 0px 20px #00ccff,
+    0px 0px 60px #ff00c8, inset 0px 0px 60px #ff00c8;
+    margin-bottom: 20px;
+} */
+.home p {
   position: absolute;
   top: 30%;
   left: 43%;
   font-size: xx-large;
   font-weight: bolder;
 }
-.header{
-  background-color: aqua;
-  height: 120px;
+.header {
+  background-color: black;
+  border: solid 5px wheat;
+  box-shadow: 0px 0px 20px #00ccff, inset 0px 0px 20px #00ccff,
+    0px 0px 60px #ff00c8, inset 0px 0px 60px #00ffff;
+  height: 100px;
 }
-.main{
-  background-color: brown;
+.main {
+  background-color: black;
 }
-.listPicture img{
+.listPicture img {
   width: 50%;
+  border: solid 3px rgb(238, 219, 243);
+  box-shadow: 0px 0px 20px #00ccff, inset 0px 0px 20px #00ccff,
+    0px 0px 60px #ff00c8, inset 0px 0px 60px #ff00c8;
 }
-.listPicture p{
+.listPicture p {
   font-size: xx-large;
-
+  color: white;
 }
-.footer{
-  background-color: chocolate;
-  height: 120px;
+.footer {
+  background-color: black;
+  border: solid 5px wheat;
+  box-shadow: 0px 0px 20px #00ccff, inset 0px 0px 20px #00ccff,
+    0px 0px 60px #ff00c8, inset 0px 0px 60px #00ffff;
+  height: 100px;
 }
-a{
+a {
   text-decoration: none;
 }
 @media (prefers-reduced-motion: no-preference) {
