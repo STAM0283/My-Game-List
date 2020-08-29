@@ -7,7 +7,7 @@ import MovieGame from "./MovieGame";
 
 const Main = () => {
     return (
-        <div>
+        <div className = "main">
        <Switch>
           <Route exact path="/">
             <Home />
