@@ -11,7 +11,7 @@ const GameList = () => {
   const [adventureGame, setAdventureGame] = useState(null);
   const [allGames, setAllGame] = useState("");
   const [modalGameIsOpen, setModalGameIsOpen] = useState(false);
-  const [moreInfos, setMoreInfos] = useState(null);
+  const [screenshots, setScreenshots] = useState(null);
   const [idScreenshots, setIdScreenshots] = useState(0);
   const [idList, setIdList] = useState(0);
   useEffect(() => {
@@ -19,7 +19,7 @@ const GameList = () => {
       setListGames(response.data.map((item) => item));
       setBestGame(response.data.filter((note) => note.rating >= 4.5));
       setAllGame(response.data.map((item) => item));
-      setMoreInfos(response.data.map((item) => item.short_screenshots));
+      setScreenshots(response.data.map((item) => item.short_screenshots));
       setActionGame(
         response.data
           .map((item) => item.genres[0])
@@ -43,10 +43,10 @@ const GameList = () => {
     });
   }, []);
   const deleteGame = () => {
-    setIdList(idList + 1);
+    setIdList(idList +1)
     delete listGames[idList];
   };
-  return listGames !== null && moreInfos !== null && actionGame !== null ? (
+  return listGames !== null && screenshots !== null && actionGame !== null ? (
     <div className="app">
       <button onClick={() => setListGames(bestGame)}>Best Games</button>
       <button onClick={() => setListGames(allGames)}>All Games</button>
@@ -85,7 +85,7 @@ const GameList = () => {
                 }}
                 onClick={() => setModalGameIsOpen(false)}
               >
-                hide the modal
+                Hide the modal
               </button>{" "}
               <button
                 style={{
@@ -109,7 +109,7 @@ const GameList = () => {
                 + Screenshots
               </button>
               <div>
-                {moreInfos.map((item) => {
+                {screenshots.map((item) => {
                   return (
                     <div>
                       <img
@@ -140,7 +140,7 @@ const GameList = () => {
                 }}
                 onClick={() => setModalGameIsOpen(false)}
               >
-                hide the modal
+                Hide the modal
               </button>
               <button
                 style={{
