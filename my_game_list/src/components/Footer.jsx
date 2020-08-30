@@ -21,17 +21,19 @@ const Footer = () => {
           onClick={() => setModalIsOpen(false)}
           style={{
             width: "10%",
-            height: "40px",
+            height: "60px",
             fontSize: "large",
             fontWeight: "bolder",
             marginLeft: "45%",
             marginBottom: "30px",
             marginTop: "10px",
             color: "black",
+            fontWeight: "bold",
             border: "solid 5px wheat",
             boxShadow: "0px 0px 20px #00ccff",
             inset: "0px 0px 20px #00ccff",
             inset: "0px 0px 60px #00ffff",
+            borderRadius: "5px",
           }}
         >
           hide the modal
@@ -47,7 +49,9 @@ const Footer = () => {
             <button
               style={{
                 width: "18%",
-                height: "40px",
+                borderRadius: "5px",
+                fontWeight: "bold",
+                height: "60px",
                 fontSize: "large",
                 fontWeight: "bolder",
                 marginLeft: "10px",
@@ -73,9 +77,10 @@ const Footer = () => {
             <button
               style={{
                 width: "18%",
-                height: "40px",
+                height: "60px",
                 fontSize: "large",
                 fontWeight: "bolder",
+                borderRadius: "5px",
                 marginLeft: "10px",
                 marginBottom: "30px",
                 marginTop: "10px",
@@ -94,8 +99,9 @@ const Footer = () => {
           <img src={email} style={{ width: "5%" }} />
           <button
             style={{
-              height: "40px",
+              height: "60px",
               width: "18%",
+              borderRadius: "5px",
               fontSize: "large",
               fontWeight: "bolder",
               marginLeft: "10px",
@@ -114,7 +120,8 @@ const Footer = () => {
           <img src={phone} style={{ width: "5%" }} />
           <button
             style={{
-              height: "40px",
+              height: "60px",
+              borderRadius: "5px",
               width: "18%",
               fontSize: "large",
               fontWeight: "bolder",
