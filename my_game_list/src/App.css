@@ -44,12 +44,15 @@ video {
 li {
   list-style: none;
 }
-/* .modal img{
-  border: solid 3px rgb(238, 219, 243);
+.modalFooter{
+  margin-left: auto;
+  border: solid 5px wheat;
   box-shadow: 0px 0px 20px #00ccff, inset 0px 0px 20px #00ccff,
-    0px 0px 60px #ff00c8, inset 0px 0px 60px #ff00c8;
-    margin-bottom: 20px;
-} */
+    0px 0px 60px #ff00c8, inset 0px 0px 60px #00ffff;
+  text-align: center;
+  margin-top: 50px;
+  height: 70%;
+}
 .home p {
   position: absolute;
   top: 30%;
