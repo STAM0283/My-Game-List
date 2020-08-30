@@ -1,6 +1,5 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Game_Clips from "../images/Game_Clips.png";
 import { NavLink } from "react-router-dom";
 
 const NavBar = () => {

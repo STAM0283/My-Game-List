@@ -13,6 +13,7 @@ const GameList = () => {
   const [modalGameIsOpen, setModalGameIsOpen] = useState(false);
   const [moreInfos, setMoreInfos] = useState(null);
   const [idScreenshots, setIdScreenshots] = useState(0);
+  const [idList, setIdList] = useState(0);
   useEffect(() => {
     axios.get("https://wild-games.herokuapp.com/api/v1").then((response) => {
       setListGames(response.data.map((item) => item));
@@ -41,6 +42,10 @@ const GameList = () => {
       );
     });
   }, []);
+  const deleteGame = () => {
+    setIdList(idList + 1);
+    delete listGames[idList];
+  };
   return listGames !== null && moreInfos !== null && actionGame !== null ? (
     <div className="app">
       <button onClick={() => setListGames(bestGame)}>Best Games</button>
@@ -48,7 +53,9 @@ const GameList = () => {
       <button onClick={() => setListGames(actionGame)}>Action Games</button>
       <button onClick={() => setListGames(shooterGame)}>Shooter Games</button>
       <button onClick={() => setListGames(rpgGame)}>RPG Games</button>
-      <button onClick={() => setListGames(adventureGame)}>Adventure Games</button>
+      <button onClick={() => setListGames(adventureGame)}>
+        Adventure Games
+      </button>
       {listGames.map((item) => {
         return (
           <div className="listPicture">
@@ -66,11 +73,15 @@ const GameList = () => {
                   height: "40px",
                   fontSize: "large",
                   fontWeight: "bolder",
-                  marginLeft: "10px",
+                  marginLeft: "40%",
                   marginBottom: "10px",
                   marginTop: "10px",
                   backgroundColor: "transparent",
                   color: "white",
+                  background: "transparent",
+                  border: "solid 5px wheat",
+                  boxShadow: "0px 0px 20px #00ccff",
+                  inset: "0px 0px 20px #00ccff",
                 }}
                 onClick={() => setModalGameIsOpen(false)}
               >
@@ -86,6 +97,11 @@ const GameList = () => {
                   marginBottom: "30px",
                   marginTop: "10px",
                   color: "white",
+                  backgroundColor: "transparent",
+                  background: "transparent",
+                  border: "solid 5px wheat",
+                  boxShadow: "0px 0px 20px #00ccff",
+                  inset: "0px 0px 20px #00ccff",
                 }}
                 onClick={() => setIdScreenshots(idScreenshots + 1)}
               >
@@ -166,6 +182,7 @@ const GameList = () => {
               <button onClick={() => setModalGameIsOpen(true)}>
                 Screenshots
               </button>
+              <button onClick = {deleteGame}>Delete</button>
             </div>
           </div>
         );
