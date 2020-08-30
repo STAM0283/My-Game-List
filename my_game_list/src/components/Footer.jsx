@@ -36,7 +36,7 @@ const Footer = () => {
             borderRadius: "5px",
           }}
         >
-          hide the modal
+          Hide the modal
         </button>
         <div className="modalFooter">
           <h1 style = {{marginTop: "50px", color: "whitesmoke"}}>STAMBOULI AMINE</h1>

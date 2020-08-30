@@ -27,6 +27,15 @@ video {
     0px 0px 60px #ff00c8, inset 0px 0px 60px #00ffff;
   width: 60%;
 }
+.imgPreview{
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border: solid 5px wheat;
+  box-shadow: 0px 0px 20px #00ccff, inset 0px 0px 20px #00ccff,
+    0px 0px 60px #ff00c8, inset 0px 0px 60px #00ffff;
+  width: 60%;
+  margin-left: 20%;
+}
 .movie {
   background-color: black;
 }
