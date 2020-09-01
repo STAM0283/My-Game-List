@@ -13,7 +13,7 @@ const Home = () => {
   }, []);
   return imageOfDay !== null ? (
     <div className="home">
-      <img src={imageOfDay[idImageOfDay].background_image} alt="picture of day" style = {{width: "60%"}}/>
+      <img src={imageOfDay[idImageOfDay].background_image} alt= {"picture of day : " + idImageOfDay } style = {{width: "60%"}}/>
     </div>
   ) : (
     <p>Pas De Data</p>

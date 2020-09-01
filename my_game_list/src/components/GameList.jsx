@@ -13,7 +13,6 @@ const GameList = () => {
   const [modalGameIsOpen, setModalGameIsOpen] = useState(false);
   const [screenshots, setScreenshots] = useState(null);
   const [idScreenshots, setIdScreenshots] = useState(0);
-  const [idList, setIdList] = useState(0);
   useEffect(() => {
     axios.get("https://wild-games.herokuapp.com/api/v1").then((response) => {
       setListGames(response.data.map((item) => item));
@@ -42,9 +41,9 @@ const GameList = () => {
       );
     });
   }, []);
-  const deleteGame = () => {
-    setIdList(idList +1)
-    delete listGames[idList];
+  const deleteGame = (e) => {
+    let id = parseInt(e.target.id);
+    setListGames((prevState) => prevState.filter((game) => game.id !== id));
   };
   return listGames !== null && screenshots !== null && actionGame !== null ? (
     <div className="app">
@@ -56,9 +55,9 @@ const GameList = () => {
       <button onClick={() => setListGames(adventureGame)}>
         Adventure Games
       </button>
-      {listGames.map((item) => {
+      {listGames.map((item, i) => {
         return (
-          <div className="listPicture">
+          <div key = {i} className="listPicture">
             <Modal
               isOpen={modalGameIsOpen}
               style={{
@@ -109,10 +108,10 @@ const GameList = () => {
                 + Screenshots
               </button>
               <div>
-                {screenshots.map((item) => {
+                {screenshots.map((item, i) => {
                   return (
-                    <div>
-                      <img
+                    <div key = {i}>
+                      <img alt = {"picture : " + item.name}
                         style={{
                           marginBottom: "30px",
                           width: "80%",
@@ -120,8 +119,7 @@ const GameList = () => {
                           border: "solid 5px wheat",
                           boxShadow: "0px 0px 20px #00ccff",
                           inset: "0px 0px 20px #00ccff",
-                          inset: "0px 0px 60px #00ffff",
-                        }}
+                        }} 
                         src={item[idScreenshots].image}
                       />
                     </div>
@@ -171,10 +169,10 @@ const GameList = () => {
               <p>Release : {item.released || "Action Game 2019"}</p>
               <img
                 src={item.background_image || item.image_background}
-                alt="picture-game"
+                alt= {"picture-game : " + item.name}
               />
               <p>Evaluation : {item.rating || "Good Game"}/5</p>
-              <label for="file"></label>
+              <label htmlFor="file"></label>
 
               <progress id="file" max="5" value={item.rating || 4.5}>
                 {" "}
@@ -182,7 +180,9 @@ const GameList = () => {
               <button onClick={() => setModalGameIsOpen(true)}>
                 Screenshots
               </button>
-              <button onClick = {deleteGame}>Delete</button>
+              <button id={item.id} onClick={deleteGame}>
+                Delete
+              </button>
             </div>
           </div>
         );

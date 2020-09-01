@@ -11,7 +11,7 @@ const NavBar = () => {
             <NavLink exact activeClassName="current" to="/">
               <button
                 type="button"
-                class="btn btn-outline-warning btn-lg"
+                className="btn btn-outline-warning btn-lg"
                 style={{
                   width: "200px",
                   marginTop: "15px",
@@ -27,7 +27,7 @@ const NavBar = () => {
             <NavLink exact activeClassName="current" to="/game-list">
               <button
                 type="button"
-                class="btn btn-outline-warning"
+                className="btn btn-outline-warning"
                 style={{ width: "200px", marginTop: "15px", fontSize: "x-large",
                   fontWeight: "bold", }}
               >
@@ -39,7 +39,7 @@ const NavBar = () => {
             <NavLink exact activeClassName="current" to="/game-clips">
               <button
                 type="button"
-                class="btn btn-outline-warning"
+                className="btn btn-outline-warning"
                 style={{ width: "200px", marginTop: "15px", fontSize: "x-large",
                   fontWeight: "bold", }}
               >

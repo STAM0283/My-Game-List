@@ -23,7 +23,6 @@ const Footer = () => {
             width: "10%",
             height: "60px",
             fontSize: "large",
-            fontWeight: "bolder",
             marginLeft: "45%",
             marginBottom: "30px",
             marginTop: "10px",
@@ -31,7 +30,6 @@ const Footer = () => {
             fontWeight: "bold",
             border: "solid 5px wheat",
             boxShadow: "0px 0px 20px #00ccff",
-            inset: "0px 0px 20px #00ccff",
             inset: "0px 0px 60px #00ffff",
             borderRadius: "5px",
           }}
@@ -39,18 +37,19 @@ const Footer = () => {
           Hide the modal
         </button>
         <div className="modalFooter">
-          <h1 style = {{marginTop: "50px", color: "whitesmoke"}}>STAMBOULI AMINE</h1>
+          <h1 style={{ marginTop: "50px", color: "whitesmoke" }}>
+            STAMBOULI AMINE
+          </h1>
           <a
             href="https://www.linkedin.com/in/stambouli-d%C3%A9veloppeur/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={linkedin} style={{ width: "5%" }} />
+            <img alt = "myLinkedin" src={linkedin} style={{ width: "5%" }} />
             <button
               style={{
                 width: "18%",
                 borderRadius: "5px",
-                fontWeight: "bold",
                 height: "60px",
                 fontSize: "large",
                 fontWeight: "bolder",
@@ -60,7 +59,6 @@ const Footer = () => {
                 color: "black",
                 border: "solid 5px wheat",
                 boxShadow: "0px 0px 20px #00ccff",
-                inset: "0px 0px 20px #00ccff",
                 inset: "0px 0px 60px #00ffff",
               }}
             >
@@ -73,7 +71,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={github} style={{ width: "5%" }} />
+            <img  alt = "My GitHub" src={github} style={{ width: "5%" }} />
             <button
               style={{
                 width: "18%",
@@ -87,7 +85,6 @@ const Footer = () => {
                 color: "black",
                 border: "solid 5px wheat",
                 boxShadow: "0px 0px 20px #00ccff",
-                inset: "0px 0px 20px #00ccff",
                 inset: "0px 0px 60px #00ffff",
               }}
             >
@@ -96,7 +93,7 @@ const Footer = () => {
           </a>
           <br />
 
-          <img src={email} style={{ width: "5%" }} />
+          <img  alt = "My E-mail" src={email} style={{ width: "5%" }} />
           <button
             style={{
               height: "60px",
@@ -110,14 +107,13 @@ const Footer = () => {
               color: "black",
               border: "solid 5px wheat",
               boxShadow: "0px 0px 20px #00ccff",
-              inset: "0px 0px 20px #00ccff",
               inset: "0px 0px 60px #00ffff",
             }}
           >
             aminestambouli00780@gmail.com
           </button>
           <br />
-          <img src={phone} style={{ width: "5%" }} />
+          <img   alt = "My Phone" src={phone} style={{ width: "5%" }} />
           <button
             style={{
               height: "60px",
@@ -131,7 +127,6 @@ const Footer = () => {
               color: "black",
               border: "solid 5px wheat",
               boxShadow: "0px 0px 20px #00ccff",
-              inset: "0px 0px 20px #00ccff",
               inset: "0px 0px 60px #00ffff",
             }}
           >
@@ -140,7 +135,7 @@ const Footer = () => {
         </div>
       </Modal>
       <button
-        class="btn btn-outline-danger btn-lg"
+        className="btn btn-outline-danger btn-lg"
         onClick={() => setModalIsOpen(true)}
         style={{
           width: "13%",
