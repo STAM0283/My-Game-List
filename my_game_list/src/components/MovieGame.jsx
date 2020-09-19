@@ -9,19 +9,20 @@ const MovieGame = () => {
   const [idGame, setIdGame] = useState(0);
   useEffect(() => {
     axios.get("https://wild-games.herokuapp.com/api/v1").then((response) => {
-      console.log(response.data.map((item) => item.clip));
+      //console.log(response.data.map((item) => item.clip));
       setListGame(response.data.map((item) => item.clip.clips));
       setPreviewGames(response.data.map((item) => item.clip));
     });
   }, []);
   const handleId = () => {
     setIdGame(idGame + 1);
-    setModalIsOpen(true)
-
-  }
+    setModalIsOpen(true);
+  };
   return listGame !== null && previewGames !== null ? (
     <div className="movie">
-    <p style = {{color: "white", fontSize: "xx-large", fontWeight: "bold"}}>There are : {previewGames.length} videos</p>
+      <p style={{ color: "white", fontSize: "xx-large", fontWeight: "bold" }}>
+        There are : {previewGames.length} videos
+      </p>
       {listGame.map((item) => {
         return (
           <div className="movieGame">
@@ -54,7 +55,12 @@ const MovieGame = () => {
                 >
                   Hide the modal
                 </button>
-                <img alt = "video Game" className="imgPreview" src={previewGames[idGame].preview} />;
+                <img
+                  alt="video"
+                  className="imgPreview"
+                  src={previewGames[idGame].preview}
+                />
+                ;
               </div>
 
               <button
@@ -82,8 +88,7 @@ const MovieGame = () => {
               <source src={item.full} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-             <div>
-             </div>
+            <div></div>
             <button
               style={{
                 width: "10%",

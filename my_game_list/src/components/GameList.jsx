@@ -57,7 +57,7 @@ const GameList = () => {
       </button>
       {listGames.map((item, i) => {
         return (
-          <div key = {i} className="listPicture">
+          <div key={i} className="listPicture">
             <Modal
               isOpen={modalGameIsOpen}
               style={{
@@ -110,8 +110,9 @@ const GameList = () => {
               <div>
                 {screenshots.map((item, i) => {
                   return (
-                    <div key = {i}>
-                      <img alt = {"picture : " + item.name}
+                    <div key={i}>
+                      <img
+                        alt={"picture : " + item.name}
                         style={{
                           marginBottom: "30px",
                           width: "80%",
@@ -119,7 +120,7 @@ const GameList = () => {
                           border: "solid 5px wheat",
                           boxShadow: "0px 0px 20px #00ccff",
                           inset: "0px 0px 20px #00ccff",
-                        }} 
+                        }}
                         src={item[idScreenshots].image}
                       />
                     </div>
@@ -169,7 +170,7 @@ const GameList = () => {
               <p>Release : {item.released || "Action Game 2019"}</p>
               <img
                 src={item.background_image || item.image_background}
-                alt= {"picture-game : " + item.name}
+                alt={"picture-game : " + item.name}
               />
               <p>Evaluation : {item.rating || "Good Game"}/5</p>
               <label htmlFor="file"></label>
