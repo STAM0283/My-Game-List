@@ -19,6 +19,9 @@
   text-align: center;
   background-color: black;
 }
+a.current{
+   color:red;
+}
 video {
   margin-bottom: 30px;
   margin-top: 30px;
